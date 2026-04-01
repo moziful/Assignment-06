@@ -4,8 +4,8 @@ import banner from '../assets/banner.png';
 
 function Hero() {
   return (
-    <div className="flex px-50 py-15 lg:px-50 border justify-center items-center gap-10 h-screen">
-        <div className="w-1/2 border p-2">
+    <div className="flex px-50 py-15 lg:px-50 justify-center items-center gap-10 h-screen">
+        <div className="w-1/2 p-2 w-160">
             <div className="flex flex-col gap-4 rounded-lg">
                 <div className="flex items-center gap-2 text-purple-600 font-medium bg-gray-100 p-2 px-4 rounded-full w-max">
                     <div className="bg-purple-200 w-6 h-6 rounded-full flex justify-center items-center">
@@ -26,7 +26,7 @@ function Hero() {
                 </div>
 
         </div>
-        <div className="w-1/2 border p-2 flex justify-center items-center">
+        <div className="w-1/2 p-2 flex justify-center items-center">
             <img className="w-125" src={banner} alt="Hero Image" />
         </div>
     </div>
