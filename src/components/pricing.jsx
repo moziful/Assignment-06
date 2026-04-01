@@ -65,7 +65,7 @@ function Pricing() {
           {plans.map((plan) => (
             <article
               key={plan.name}
-              className={`relative flex min-h-[520px] flex-col rounded-[26px] border px-8 py-8 shadow-[0_12px_40px_rgba(15,23,42,0.06)] ${
+              className={`relative flex min-h-[520px] flex-col rounded-[26px] border px-6 py-8 shadow-[0_12px_40px_rgba(15,23,42,0.06)] sm:px-8 ${
                 plan.featured
                   ? 'border-transparent bg-linear-to-br from-violet-700 via-violet-600 to-fuchsia-500 text-white'
                   : 'border-gray-200 bg-white text-slate-900'
@@ -77,14 +77,14 @@ function Pricing() {
                 </div>
               )}
 
-              <h3 className="text-2xl font-bold">{plan.name}</h3>
-              <p className={`mt-2 text-lg ${plan.featured ? 'text-violet-100' : 'text-slate-500'}`}>
+              <h3 className="text-xl font-bold sm:text-2xl">{plan.name}</h3>
+              <p className={`mt-2 text-base sm:text-lg ${plan.featured ? 'text-violet-100' : 'text-slate-500'}`}>
                 {plan.description}
               </p>
 
               <div className="mt-8 flex items-end gap-1">
-                <span className="text-5xl font-bold">{plan.price}</span>
-                <span className={`pb-1 text-2xl ${plan.featured ? 'text-violet-100' : 'text-slate-500'}`}>
+                <span className="text-4xl font-bold sm:text-5xl">{plan.price}</span>
+                <span className={`pb-1 text-xl sm:text-2xl ${plan.featured ? 'text-violet-100' : 'text-slate-500'}`}>
                   {plan.period}
                 </span>
               </div>
@@ -95,7 +95,7 @@ function Pricing() {
                     <span className={plan.featured ? 'text-white' : 'text-emerald-500'}>
                       &#10003;
                     </span>
-                    <span className={`text-lg leading-7 ${plan.featured ? 'text-white' : 'text-slate-600'}`}>
+                    <span className={`text-base leading-7 sm:text-lg ${plan.featured ? 'text-white' : 'text-slate-600'}`}>
                       {feature}
                     </span>
                   </div>

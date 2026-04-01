@@ -41,7 +41,7 @@ function Steps() {
           {steps.map((step) => (
             <article
               key={step.number}
-              className="relative rounded-[28px] border border-gray-200 bg-white px-8 py-14 text-center shadow-[0_12px_40px_rgba(15,23,42,0.06)]"
+              className="relative rounded-[28px] border border-gray-200 bg-white px-6 py-10 text-center shadow-[0_12px_40px_rgba(15,23,42,0.06)] sm:px-8 sm:py-14"
             >
               <div className="absolute right-4 top-4 flex h-10 w-10 items-center justify-center rounded-full bg-violet-600 text-sm font-bold text-white">
                 {step.number}
@@ -51,11 +51,11 @@ function Steps() {
                 <img src={step.icon} alt={step.alt} className="h-12 w-12 object-contain" />
               </div>
 
-              <h3 className="mt-8 text-2xl font-bold text-slate-900">
+              <h3 className="mt-8 text-xl font-bold text-slate-900 sm:text-2xl">
                 {step.title}
               </h3>
 
-              <p className="mt-4 text-lg leading-7 text-slate-500">
+              <p className="mt-4 text-base leading-7 text-slate-500 sm:text-lg">
                 {step.description}
               </p>
             </article>

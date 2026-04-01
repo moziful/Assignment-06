@@ -1,6 +1,6 @@
 import React from 'react';
 
-function Button({ btnName, className = '', variant = 'gradient' }) {
+function Button({ btnName, className = '', variant = 'gradient', onClick }) {
   const variantClasses = {
     gradient:
       'bg-linear-to-r from-violet-700 via-violet-600 to-fuchsia-500 text-white shadow-[0_12px_30px_rgba(124,58,237,0.28)] hover:from-violet-800 hover:to-fuchsia-600',
@@ -13,6 +13,7 @@ function Button({ btnName, className = '', variant = 'gradient' }) {
   return (
     <button
       type="button"
+      onClick={onClick}
       className={`inline-flex items-center justify-center rounded-full px-6 py-3 text-base font-semibold transition hover:scale-[1.02] ${variantClasses[variant]} ${className}`}
     >
       {btnName}

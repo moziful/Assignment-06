@@ -1,11 +1,10 @@
 import React from 'react';
-import Button from './button';
 
 function Heading({ heading, subheading }) {
   return (
     <div className='mx-auto text-center'>
-      <h1 className="text-4xl font-bold text-gray-900">{heading}</h1>
-      <p className="text-lg text-gray-500 mt-2">{subheading}</p>
+      <h1 className="text-3xl font-bold text-gray-900 sm:text-4xl lg:text-5xl">{heading}</h1>
+      <p className="mt-2 text-base text-gray-500 sm:text-lg">{subheading}</p>
     </div>
   );
 }

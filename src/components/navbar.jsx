@@ -5,7 +5,7 @@ import Button from './button';
 
 const navItems = ['Products', 'Features', 'Pricing', 'Testimonials', 'FAQ'];
 
-function Navbar() {
+function Navbar({ cartCount }) {
   return (
     <header className="border-b border-gray-200 bg-white">
       <nav className="mx-auto flex max-w-[1240px] items-center justify-between px-6 py-5 lg:px-10">
@@ -31,9 +31,12 @@ function Navbar() {
         <div className="hidden items-center gap-6 lg:flex">
           <a
             href="#"
-            className="flex items-center gap-2 text-lg font-medium text-slate-700 transition hover:text-violet-600"
+            className="relative flex items-center gap-2 text-lg font-medium text-slate-700 transition hover:text-violet-600"
           >
             <img src={shoppingCartIcon} alt="Cart" className="h-5 w-5 object-contain" />
+            <span className="absolute -right-3 -top-3 flex h-5 min-w-5 items-center justify-center rounded-full bg-violet-600 px-1 text-xs font-semibold text-white">
+              {cartCount}
+            </span>
           </a>
 
           <a
@@ -68,7 +71,7 @@ function Navbar() {
             ))}
             <li>
               <a className="rounded-xl text-base font-medium text-slate-700">
-                Cart
+                Cart ({cartCount})
               </a>
             </li>
             <li>

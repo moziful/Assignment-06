@@ -2,20 +2,22 @@ import React from 'react';
 
 function Stats() {
   return (
-    <div className="w-full flex justify-between items-center gap-1 px-50 py-15 bg-purple-800 text-white">
-        <div className='p-4 rounded-lg w-1/3 text-center'>
-            <p className='text-4xl font-extrabold'>50K+</p>
-            <p className='opacity-80 font-medium'>Active Users</p>
+    <section className="bg-purple-800 px-6 py-12 text-white lg:px-10">
+      <div className="mx-auto grid max-w-[1240px] gap-8 md:grid-cols-3">
+        <div className='rounded-lg p-4 text-center'>
+            <p className='text-3xl font-extrabold sm:text-4xl'>50K+</p>
+            <p className='font-medium opacity-80'>Active Users</p>
         </div>
-        <div className='p-4 rounded-lg w-1/3 text-center'>
-            <p className='text-4xl font-extrabold'>200+</p>
-            <p className='opacity-80 font-medium'>Premium Tools</p>
+        <div className='rounded-lg p-4 text-center'>
+            <p className='text-3xl font-extrabold sm:text-4xl'>200+</p>
+            <p className='font-medium opacity-80'>Premium Tools</p>
         </div>
-        <div className='p-4 rounded-lg w-1/3 text-center'>
-            <p className='text-4xl font-extrabold'>4.9</p>
-            <p className='opacity-80 font-medium'>Rating</p>
+        <div className='rounded-lg p-4 text-center'>
+            <p className='text-3xl font-extrabold sm:text-4xl'>4.9</p>
+            <p className='font-medium opacity-80'>Rating</p>
         </div>
-  </div>
+      </div>
+    </section>
   );
 }
 

@@ -1,7 +1,7 @@
 import React from "react";
 import Button from "./button";
 
-function Card({ product }) {
+function Card({ product, addToCart, isInCart }) {
   const badgeStyles = {
     popular: "bg-blue-100 text-blue-600",
     new: "bg-green-100 text-green-600",
@@ -9,37 +9,34 @@ function Card({ product }) {
   };
 
   return (
-    <div className="p-6 border border-gray-200 rounded-xl flex flex-col gap-4 hover:shadow-lg transition">
-      <div className="flex justify-between items-center">
-        <div className="w-16 h-16 flex justify-center items-center border border-gray-200 rounded-full p-3">
+    <div className="flex flex-col gap-4 rounded-xl border border-gray-200 p-6 transition hover:shadow-lg">
+      <div className="flex items-center justify-between">
+        <div className="flex h-16 w-16 items-center justify-center rounded-full border border-gray-200 p-3">
           <img
             src={product.icon}
             alt={product.name}
-            className="w-full h-full object-contain"
+            className="h-full w-full object-contain"
           />
         </div>
+
         <div
-          className={`px-3 h-8 flex justify-center items-center rounded-full capitalize text-sm font-medium ${
+          className={`flex h-8 items-center justify-center rounded-full px-3 text-sm font-medium capitalize ${
             badgeStyles[product.tagType]
           }`}
         >
           {product.tag}
         </div>
       </div>
-      <p className="text-2xl font-bold text-gray-900">
-        {product.name}
-      </p>
-      <p className="text-gray-600">
-        {product.description}
-      </p>
+
+      <p className="text-2xl font-bold text-gray-900">{product.name}</p>
+
+      <p className="text-gray-600">{product.description}</p>
+
       <div className="flex items-end gap-1">
-        <p className="text-2xl font-bold text-gray-900">
-          ${product.price}
-        </p>
-        <p className="text-sm text-gray-500">
-          /{product.period}
-        </p>
+        <p className="text-2xl font-bold text-gray-900">${product.price}</p>
+        <p className="text-sm text-gray-500">/{product.period}</p>
       </div>
+
       <div className="space-y-2">
         {product.features.map((feature, index) => (
           <div key={index} className="flex gap-2">
@@ -48,7 +45,13 @@ function Card({ product }) {
           </div>
         ))}
       </div>
-      <Button btnName="Buy Now" />
+
+      <Button
+        btnName={isInCart ? "Added To Cart" : "Buy Now"}
+        className="mt-auto w-full justify-center"
+        variant={isInCart ? "light" : "gradient"}
+        onClick={() => addToCart(product)}
+      />
     </div>
   );
 }
