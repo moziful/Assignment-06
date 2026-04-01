@@ -4,6 +4,7 @@ import Navbar from './components/navbar';
 import Stats from './components/stats';
 import Products from './components/products';
 import Steps from './components/steps';
+import Pricing from './components/pricing';
 
 
 
@@ -16,6 +17,7 @@ function App() {
     <Stats />
     <Products />
     <Steps />
+    <Pricing />
     </>
   );
 }
