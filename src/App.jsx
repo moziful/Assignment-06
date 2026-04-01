@@ -5,6 +5,8 @@ import Stats from './components/stats';
 import Products from './components/products';
 import Steps from './components/steps';
 import Pricing from './components/pricing';
+import Transform from './components/transform';
+import Footer from './components/footer';
 
 
 
@@ -18,6 +20,8 @@ function App() {
     <Products />
     <Steps />
     <Pricing />
+    <Transform />
+    <Footer />
     </>
   );
 }
