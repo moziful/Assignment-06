@@ -1,9 +1,14 @@
 import React from 'react';
 
-function Button({ btnName }) {
+function Button({ btnName, className = '' }) {
   return (
-    <div class="btn p-2 px-4 bg-purple-800 rounded-full text-white">{btnName}</div>
+    <button
+      type="button"
+      className={`inline-flex items-center justify-center rounded-full bg-linear-to-r from-violet-700 via-violet-600 to-fuchsia-500 px-6 py-3 text-base font-semibold text-white shadow-[0_12px_30px_rgba(124,58,237,0.28)] transition hover:scale-[1.02] hover:from-violet-800 hover:to-fuchsia-600 ${className}`}
+    >
+      {btnName}
+    </button>
   );
 }
 
-export default Button
+export default Button;
